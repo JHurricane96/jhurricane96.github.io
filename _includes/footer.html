@@ -1,8 +1,7 @@
 <footer class="center">
   <div class="measure">
     <small>
-      Theme crafted with &lt;3 by <a href="https://johno.com/">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
-      &lt;/&gt; available on <a href="https://github.com/johno/pixyll">GitHub</a>.
+      &copy; Arun Ramachandran 2017-<span id="copyright-end-year"></span>. Based on John Otander's <a href="https://github.com/johno/pixyll">Pixyll theme</a>.
     </small>
   </div>
 </footer>
@@ -16,4 +15,5 @@
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("{{ '/sw.js' | relative_url }}")
     }
+    document.getElementById("copyright-end-year").innerText = (new Date()).getYear().toString().slice(-2);
 </script>

@@ -1,34 +1,224 @@
 ---
 layout: default
+tags: about
 ---
-{% assign posts_count = paginator.posts | size %}
+<img src="{{ site.baseurl }}/images/avatar.jpg" alt="Arun Ramachandran" width="240"
+  style="float: right; padding-left: 50px; border-radius: 100%;" />
 
-<div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">
-	    {% if site.date_format %}
-	      {{ post.date | date: site.date_format }}
-	    {% else %}
-	      {{ post.date | date: "%b %-d, %Y" }}
-	    {% endif %}
-	  </p>
-          <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <span class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </span>
+<div class="bio" style="text-align:justify">
+  <!-- <p>I'm Arun, a programmer who aims to change the world with software, or so I tell myself right before spending the rest of the day fixing that darn broken dependency chain.</p>
+  <p>I'm currently studying for my Master's degree in Computer Science at Georgia Tech. Before that, I worked as a Software Engineer at Microsoft for 3 years. I did my undergrad in Computer Science and Engineering at <a href="https://www.nitt.edu/" target="_blank">NIT Trichy</a>, graduating in May 2018. I love solving complex problems with code, stretching myself to the limits of my abilities and seeing what lies beyond.</p>
+  <p>I enjoy wasting my time playing video games, reading fantasy novels and idly considering the existence of <a href="https://en.wikipedia.org/wiki/Neuroscience_of_free_will" target="_blank">free will</a>.</p>
+  <p>I write (not very often) too. Check out my <a href="https://medium.com/@arun.ram" target="_blank">blog here!</a></p> -->
+  <p>
+    I'm a second year Master's in Computer Science student at Georgia Tech, advised by <a href="https://faculty.cc.gatech.edu/~dbatra/">Prof. Dhruv Batra</a>.
+    I am interested in embodied AI &mdash; developing agents that can see, act and reason in the world.
+    Specifically, I am interested in areas of embodied AI related to language, <a href="https://yashkant.github.io/housekeep/">commonsense reasoning</a> and <a href="https://aihabitat.org/challenge/2023_homerobot_ovmm/">generalization capabilities</a>.
+  </p>
+  <p>
+    In a past life, I was a software engineer at Microsoft, working in the <a href="https://www.bing.com/shop?q=phones&setmkt=en-us">Bing Shopping</a> team.
+    I was initially a full-stack web developer and later moved into machine learning.
+    I worked on applying natural language processing and information retrieval techniques to areas like query understanding and product ranking.
+    I also did independent research on <a href="https://aclanthology.org/2020.coling-main.517/">emotion analysis in low-resource languages</a>.
+  </p>
+  <p>
+    I did my undergrad in Computer Science and Engineering at <a href="https://www.nitt.edu/">NIT Trichy</a>.
+    During that time, I interned at Amazon and Microsoft, working on Alexa and Cortana.
+    My undergrad thesis focused on an empirical analysis of the effectiveness of different game tree search algorithms.
+  </p>
+
+  <br />
+
+  <div class="affiliations container">
+    <div class="row">
+      <div class="col affiliation">
+        <div class="affiliation-logo">
+          <a href="https://www.nitt.edu/"><img src="images/logos/nitt.png"></a>
         </div>
-      {% endfor %}
+        <div class="affiliation-text">
+          <h6>2014 - 2018</h6>
+        </div>
+      </div>
+      <div class="col affiliation">
+        <div class="affiliation-logo">
+          <a href="https://www.aboutamazon.com/"><img src="images/logos/amazon.png"></a>
+        </div>
+        <div class="affiliation-text">
+          <h6>Summer 2016</h6>
+        </div>
+      </div>
+      <div class="col affiliation">
+        <div class="affiliation-logo">
+          <a href="https://www.microsoft.com/"><img src="images/logos/msft.png"></a>
+        </div>
+        <div class="affiliation-text">
+          <h6>Summer 2017,<br/> 2018 - 2021</h6>
+        </div>
+      </div>
+      <div class="col affiliation">
+        <div class="affiliation-logo">
+          <a href="https://www.gatech.edu/"><img src="images/logos/gatech.png"></a>
+        </div>
+        <div class="affiliation-text">
+          <h6>2021 - 2023</h6>
+        </div>
+      </div>
+      <div class="col affiliation">
+        <div class="affiliation-logo">
+          <a href="https://www.isee.ai/"><img src="images/logos/isee.jpeg"></a>
+        </div>
+        <div class="affiliation-text">
+          <h6>Summer - Fall 2022</h6>
+        </div>
+      </div>
     </div>
+  </div>
 
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h1>
-  {% endif %}
+<hr />
+
+<div id="research" class="research">
+  <h2><a name="research">Publications</a><span class="right" style="font-size:0.7rem;">(*=equal contribution)</span></h2>
+  <br />
+
+    <table>
+    <tbody>
+      <tr>
+        <td class="valign">
+          <div class="one" style="text-align:center">
+            <img src="images/research/ovmm.png">
+          </div>
+        </td>
+        <td>
+          <h5>
+            HomeRobot: Open-Vocabulary Mobile Manipulation
+          </h5>
+          <p class="authors">
+            Sriram Yenamandra*, <b>Arun Ramachandran*</b>, Karmesh Yadav*, Austin Wang, Mukul Khanna, Theophile Gervet, Tsung-Yen Yang, Vidhi Jain, Alexander William Clegg, John Turner, Devendra Singh Chaplot, Zsolt Kira, Manolis Savva, Angel Chang, Dhruv Batra, Roozbeh Mottaghi, Yonatan Bisk, Chris Paxton
+            <br />
+          </p>
+          <a href="https://aihabitat.org/challenge/2023_homerobot_ovmm/" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Project Page</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="valign">
+          <div class="one" style="text-align:center">
+            <img src="images/research/housekeep.png">
+          </div>
+        </td>
+        <td>
+          <h5>
+            Housekeep: Tidying Virtual Households using Commonsense Reasoning
+          </h5>
+          <p>
+            <a href="https://eccv2022.ecva.net/" class="uline-special"><span style="color:red">ECCV 2022</span></a>
+          </p>
+          <p class="authors">
+            Yash Kant, <b>Arun Ramachandran</b>, Sriram Yenamandra, Igor Gilitschenski, Dhruv Batra, Andrew Szot*, Harsh Agrawal*
+            <br />
+          </p>
+          <a href="https://arxiv.org/abs/2205.10712" class="btn btn-outline-primary btn-sm" role="button"
+            aria-pressed="true">Paper</a>
+          <a href="https://yashkant.github.io/housekeep/" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Project Page</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="valign">
+          <div class="one" style="text-align:center">
+            <img src="images/research/emolex.png">
+          </div>
+        </td>
+        <td>
+          <h5>
+            Cross-Lingual Emotion Lexicon Induction using Representation Alignment in Low-Resource Settings
+          </h5>
+          <p>
+            <a href="https://coling2020.org/" class="uline-special"><span style="color:red">COLING 2020</span></a>
+          </p>
+          <p class="authors">
+            <b>Arun Ramachandran</b>, Gerard de Melo
+            <br />
+          </p>
+          <a href="https://aclanthology.org/2020.coling-main.517/" class="btn btn-outline-primary btn-sm" role="button"
+            aria-pressed="true">Paper</a>
+          <a href="http://emotionlexicon.org/" class="btn btn-outline-primary btn-sm" role="button" aria-pressed="true">Project Page</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+<hr>
+
+<div id="projects" class="projects">
+  <h2>Projects</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <h5>
+            Improving the Student-Teacher Approach for Semi-Supervised Semantic Segmentation
+          </h5>
+          <p class="authors">
+            <b>Arun Ramachandran</b>, Jeremiah Coholich, Harsh Maheshwari, Simar Kareer
+          </p>
+          <p class="authors">
+            We propose and evaluate two variants to the mean teacher self-distillation technique:
+            sliding-window teacher evaluation and the ensembling of two mean-teachers with different update rates.
+            The latter modification improved results over the baseline mean-teacher.
+          </p>
+          <a href="https://www.youtube.com/watch?v=Ym84hm8Gih4" class="btn btn-outline-primary btn-sm" role="button"
+            aria-pressed="true">Video</a>
+        </td>
+        <td class="valign">
+          <img src="images/projects/slideteach.webp">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h5>fasttensor: A C++ high-performance computing library</h5>
+          <p class="authors">
+            I wrote a C++ library for high-performance computing of basic arithmetic operations on tensors.
+            It uses SIMD instructions on CPU and CUDA on GPU to accelerate computation, and can use multiple GPUs.
+            It uses <a href="https://en.wikipedia.org/wiki/Expression_templates">expression templates</a> and kernel fusion to avoid unnecessary memory allocations and copies.
+            It achieves over 1.5x speedup over normal eager evaluation.
+          </p>
+          <a href="https://github.com/JHurricane96/fasttensor" class="btn btn-outline-primary btn-sm" role="button"
+            aria-pressed="true">Code</a>
+        </td>
+        <td class="valign">
+          <img src="images/projects/fasttensor.png">
+        </td>
+      </tr>
+      <td>
+        <h5>Chess AI: A self-learning chess artificial intelligence</h5>
+        <p class="authors">
+          I made a self-learning chess AI with reinforcement learning and game tree searching.
+          I used <a href="https://en.wikipedia.org/wiki/MTD(f)">MTD-f</a>, an optimized version of minimax, to speed up game tree searching by 1.5x.
+          The AI ended up successfully learning positional advantages of pieces in different phases of the game.
+        </p>
+        <a href="https://github.com/JHurricane96/chessai" class="btn btn-outline-primary btn-sm" role="button"
+        aria-pressed="true">Code</a>
+      </td>
+      <td class="valign">
+        <img src="https://i.imgur.com/RGJON84.gif">
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <h5>Code Character: An online AI contest</h5>
+          <p class="authors">
+            Code Character is a yearly contest hosted by my <a href="https://www.nitt.edu/">undergraduate institution</a>, where players write their own AI to control troops in a real-time strategy game.
+            I designed the game for the 2017 and 2018 editions and led a team of programmers to make a web app to automate submissions and a cross-platform C++ engine for the game.
+            In 2018, we launched the contest and had over 1300 participants from 74 different countries.
+          </p>
+          <a href="https://github.com/delta/codecharacter-simulator-2018" class="btn btn-outline-primary btn-sm" role="button"
+          aria-pressed="true">Code</a>
+        </td>
+        <td class="valign">
+          <img src="images/projects/codechar.png">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
