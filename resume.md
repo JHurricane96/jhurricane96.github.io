@@ -1,6 +1,6 @@
 ---
 layout: resume
-# title: About Pixyll
+title: Arun Ramachandran's Resume
 permalink: /resume/
 tags: resume
 ---
