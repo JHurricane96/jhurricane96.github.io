@@ -33,7 +33,11 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-// bootstrap fix
+// bootstrap fixes
 a.btn.btn-outline-primary:hover, a.btn.btn-outline-primary:focus {
+  border: 1px solid transparent;
+}
+
+a.btn.btn-primary:hover, a.btn.btn-primary:focus {
   border: 1px solid transparent;
 }
